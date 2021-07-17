@@ -80,7 +80,8 @@ public class Bot extends ListenerAdapter implements EventListener {
                             new SlashCommand(),
                             new Buttons(),
                             new GuildJoin(),
-                            new GuildLeave()
+                            new GuildLeave(),
+                            new MemberLeave()
                     )
                     .setActivity(Activity.watching("HHS Students"))
                     .build();

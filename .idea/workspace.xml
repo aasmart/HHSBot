@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d372725e-d915-496e-9b63-a16c111a76f3" name="Default Changelist" comment="" />
+    <list default="true" id="d372725e-d915-496e-9b63-a16c111a76f3" name="Default Changelist" comment="Initial Commit">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/smart/hhsbot/events/MemberLeave.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/smart/hhsbot/Bot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smart/hhsbot/Bot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/smart/hhsbot/events/Buttons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smart/hhsbot/events/Buttons.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,6 +27,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
       <filtered-out-file-type name="LOCAL_BRANCH" />
@@ -31,6 +39,7 @@
     </file-type-list>
   </component>
   <component name="ProjectId" id="1tl09MXCMlRuoeYcEteJYRvKMN5" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -41,7 +50,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../HaslettHighGuildBot" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -102,11 +111,28 @@
       <workItem from="1623677169463" duration="2654000" />
       <workItem from="1623685004608" duration="50213000" />
       <workItem from="1623984403175" duration="1841000" />
-      <workItem from="1623986386604" duration="15412000" />
+      <workItem from="1623986386604" duration="17588000" />
+      <workItem from="1624210447780" duration="24000" />
+      <workItem from="1624212301248" duration="211000" />
+      <workItem from="1624212786546" duration="616000" />
+      <workItem from="1624321545351" duration="1369000" />
+      <workItem from="1626528857986" duration="384000" />
     </task>
+    <task id="LOCAL-00001" summary="Initial Commit">
+      <created>1624137695013</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1624137695013</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit" />
   </component>
 </project>

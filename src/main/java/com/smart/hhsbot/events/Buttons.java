@@ -3,6 +3,7 @@ package com.smart.hhsbot.events;
 import com.smart.hhsbot.Bot;
 import com.smart.hhsbot.games.TicTacToe;
 import com.smart.hhsbot.userVerification.UserVerification;
+import net.dv8tion.jda.api.events.guild.update.GuildUpdateBoostCountEvent;
 import net.dv8tion.jda.api.events.interaction.ButtonClickEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import org.jetbrains.annotations.NotNull;
