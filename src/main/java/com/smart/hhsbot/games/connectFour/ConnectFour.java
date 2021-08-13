@@ -249,9 +249,9 @@ public class ConnectFour {
             return true;
 
         List<ConnectFourPieceType> upDiagonal = new ArrayList<>();
-        int upDiagonalColumn = Math.max(0,columnVal - (5 - rowVal));
-        for(int i = Math.min(5, (columnVal == 6 ? columnVal - 1 : columnVal) + rowVal); i >= 0; i--) {
-            if(upDiagonalColumn + ((board.board.length - 1) - i) > 6)
+        int upDiagonalColumn = Math.max(0,columnVal - (ConnectFourBoard.BOARD_HEIGHT-1 - rowVal));
+        for(int i = Math.min(ConnectFourBoard.BOARD_HEIGHT-1, Math.min(ConnectFourBoard.BOARD_WIDTH-1, columnVal) + rowVal); i >= 0; i--) {
+            if(upDiagonalColumn + ((board.board.length - 1) - i) > ConnectFourBoard.BOARD_WIDTH-1)
                 break;
             upDiagonal.add(board.board[i][upDiagonalColumn + ((board.board.length - 1) - i)]);
         }
@@ -259,14 +259,16 @@ public class ConnectFour {
             return true;
 
         List<ConnectFourPieceType> downDiagonal = new ArrayList<>();
-        int tempVal = (5 - Math.min(6, columnVal)) + (rowVal - 5);
+        int tempVal = ((ConnectFourBoard.BOARD_HEIGHT-1) - Math.min(ConnectFourBoard.BOARD_WIDTH-1, columnVal)) + (rowVal - (ConnectFourBoard.BOARD_HEIGHT-1));
         int downDiagonalColumn = tempVal < 0 ? Math.abs(tempVal) : 0;
         for(int i = Math.max(0, tempVal); i < board.board.length; i++) {
-            if(downDiagonalColumn + i > 6)
+            try {
+                downDiagonal.add(board.board[i][downDiagonalColumn + i]);
+            } catch (Exception e) {
                 break;
-            downDiagonal.add(board.board[i][downDiagonalColumn + i]);
+            }
         }
-        return upDiagonal.size() >= 4 && checkWinCondition(downDiagonal.toArray(ConnectFourPieceType[]::new), piece);
+        return downDiagonal.size() >= 4 && checkWinCondition(downDiagonal.toArray(ConnectFourPieceType[]::new), piece);
     }
 
     /**

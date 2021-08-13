@@ -5,8 +5,8 @@ import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.entities.MessageEmbed;
 
 public class ConnectFourBoard {
-    private static final int BOARD_HEIGHT = 6;
-    private static final int BOARD_WIDTH = 7;
+    public static final int BOARD_HEIGHT = 6;
+    public static final int BOARD_WIDTH = 7;
 
     public ConnectFourPieceType[][] board;
     public ConnectFourBoard() {
@@ -36,7 +36,7 @@ public class ConnectFourBoard {
             if(row > 0 && board[row][placeColumn] != ConnectFourPieceType.BLANK) {
                 board[row - 1][placeColumn] = piece;
                 return row - 1;
-            } else if(row == 5) {
+            } else if(row == ConnectFourBoard.BOARD_HEIGHT-1) {
                 board[row][placeColumn] = piece;
                 return row;
             }
