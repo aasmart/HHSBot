@@ -79,6 +79,7 @@ public class Bot extends ListenerAdapter implements EventListener {
                             new MemberJoin(),
                             new SlashCommand(),
                             new Buttons(),
+                            new SelectionMenu(),
                             new GuildJoin(),
                             new GuildLeave(),
                             new MemberLeave()
@@ -86,10 +87,10 @@ public class Bot extends ListenerAdapter implements EventListener {
                     .setActivity(Activity.watching("HHS Students"))
                     .build();
 
-            /*CommandListUpdateAction commands = jda.updateCommands();
+            CommandListUpdateAction commands = jda.updateCommands();
 
-            loadAllCommands(commands);
-            commands.queue();*/
+//            loadAllCommands(commands);
+//            commands.queue();
 
             System.out.println("Bot Loaded!");
             return jda;
@@ -100,7 +101,7 @@ public class Bot extends ListenerAdapter implements EventListener {
     }
 
     public static void loadAllCommands(CommandListUpdateAction commands) {
-        VerificationCommands.loadVerificationCommands(commands);
+//        VerificationCommands.loadVerificationCommands(commands);
         Games.loadGameCommands(commands);
     }
 

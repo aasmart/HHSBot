@@ -6,7 +6,7 @@ group 'org.example'
 version '1.0-SNAPSHOT'
 
 dependencies {
-    implementation("net.dv8tion:JDA:4.3.0_278")
+    implementation("net.dv8tion:JDA:4.3.0_307")
     implementation 'com.google.api-client:google-api-client:1.30.10'
     implementation 'com.google.oauth-client:google-oauth-client-jetty:1.31.0'
     implementation 'com.google.apis:google-api-services-gmail:v1-rev110-1.25.0'

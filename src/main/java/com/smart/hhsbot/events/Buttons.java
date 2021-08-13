@@ -1,9 +1,9 @@
 package com.smart.hhsbot.events;
 
 import com.smart.hhsbot.Bot;
+import com.smart.hhsbot.games.connectFour.ConnectFour;
 import com.smart.hhsbot.games.TicTacToe;
 import com.smart.hhsbot.userVerification.UserVerification;
-import net.dv8tion.jda.api.events.guild.update.GuildUpdateBoostCountEvent;
 import net.dv8tion.jda.api.events.interaction.ButtonClickEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import org.jetbrains.annotations.NotNull;
@@ -14,10 +14,10 @@ public class Buttons extends ListenerAdapter {
         String[] id = event.getComponentId().split(":");
         String type = id[0];
 
-        event.deferEdit().queue();
 
         switch (type) {
             case "verification" -> {
+                event.deferEdit().queue();
                 switch (id[1]) {
                     case "email-submit" -> UserVerification.emailVerification(event, id);
                     case "email" -> UserVerification.handleEmailCheck(event, id);
@@ -42,12 +42,27 @@ public class Buttons extends ListenerAdapter {
                 }
             }
             case "game" -> {
+                event.deferEdit().queue();
                 switch (id[1]) {
+                    // Tic Tac Toe
                     case "accept-tic" -> TicTacToe.gameAccept(event, id);
                     case "decline-tic" -> TicTacToe.gameDecline(event, id);
                     case "start-tic" -> TicTacToe.gameStart(event, id);
                     case "cancel-tic" -> TicTacToe.gameCancel(event, id);
                     case "tictactoe" -> TicTacToe.updateGameBoard(event, id);
+                    // Connect 4
+                    case "accept-four" -> ConnectFour.gameAccept(event, id);
+                    case "decline-four" -> ConnectFour.gameDecline(event, id);
+                    case "start-four" -> ConnectFour.gameStart(event, id);
+                    case "cancel-four" -> ConnectFour.gameCancel(event, id);
+                }
+            }
+            case "connect-four" -> {
+                switch (id[1]) {
+                    case "forfeit" -> ConnectFour.gameForfeit(event, id);
+                    case "draw" -> ConnectFour.gameDraw(event, id);
+                    case "draw-accept" -> ConnectFour.drawAccept(event, id);
+                    case "draw-decline" -> ConnectFour.drawDecline(event, id);
                 }
             }
         }
