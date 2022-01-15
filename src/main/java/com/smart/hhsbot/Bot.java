@@ -93,9 +93,7 @@ public class Bot extends ListenerAdapter implements EventListener {
                     .build();
 
             CommandListUpdateAction commands = jda.updateCommands();
-
             loadAllCommands(commands);
-//            commands.queue();
 
             System.out.println("Bot Loaded!");
             return jda;

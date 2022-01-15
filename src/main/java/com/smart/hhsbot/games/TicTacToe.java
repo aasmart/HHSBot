@@ -16,6 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 
 public class TicTacToe {
@@ -102,9 +103,9 @@ public class TicTacToe {
                                     String[] buttonIds = Objects.requireNonNull(button.getId()).split(":");
                                     if(button.getId() != null && buttonIds.length >= 6 && buttonIds[5].equals(ids[5])) {
                                         if (nextSymbol.equals("o"))
-                                            return Button.secondary("x:disabled", Emoji.fromUnicode("U+274C"));
+                                            return Button.secondary("x:disabled:" + System.currentTimeMillis(), Emoji.fromUnicode("U+274C"));
                                         else
-                                            return Button.secondary("o:disabled", Emoji.fromUnicode("U+2B55"));
+                                            return Button.secondary("o:disabled:" + System.currentTimeMillis(), Emoji.fromUnicode("U+2B55"));
                                     } else if(!button.getId().contains("disabled"))
                                         return button.withId("game:tictactoe:" + nextSymbol + ":" + ids[4] + ":" + ids[3] + ":" + button.getId().split(":")[5]);
                                     else
