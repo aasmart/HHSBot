@@ -1,6 +1,5 @@
 package com.smart.hhsbot;
 
-import com.smart.hhsbot.Bot;
 import com.smart.hhsbot.commands.Commands;
 import net.dv8tion.jda.api.entities.Guild;
 import net.dv8tion.jda.api.entities.MessageEmbed;

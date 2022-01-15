@@ -19,6 +19,8 @@ import net.dv8tion.jda.api.utils.MemberCachePolicy;
 
 import java.awt.*;
 import java.io.File;
+import java.io.InputStream;
+import java.net.URL;
 import java.nio.file.Files;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -65,9 +67,12 @@ public class Bot extends ListenerAdapter implements EventListener {
 
     public JDA loadBot() {
         try {
-            String FILE_DIRECTORY = "C:\\Users\\alexa\\Documents\\HHSBot\\";
-            String TOKEN_PATH = "bot-token.secret";
-            String token = new String(Files.readAllBytes(new File(FILE_DIRECTORY + TOKEN_PATH).toPath()));
+            String TOKEN_PATH = "/bot-token.secret";
+            InputStream file = Bot.class.getResourceAsStream(TOKEN_PATH);
+            if(file == null)
+                throw new NullPointerException("Failed to retrieve resource: " + TOKEN_PATH);
+
+            String token = new String(file.readAllBytes());
 
             // Load JDA
             JDA jda = JDABuilder.createDefault(
@@ -89,7 +94,7 @@ public class Bot extends ListenerAdapter implements EventListener {
 
             CommandListUpdateAction commands = jda.updateCommands();
 
-//            loadAllCommands(commands);
+            loadAllCommands(commands);
 //            commands.queue();
 
             System.out.println("Bot Loaded!");
@@ -101,7 +106,7 @@ public class Bot extends ListenerAdapter implements EventListener {
     }
 
     public static void loadAllCommands(CommandListUpdateAction commands) {
-//        VerificationCommands.loadVerificationCommands(commands);
+        VerificationCommands.loadVerificationCommands(commands);
         Games.loadGameCommands(commands);
     }
 

@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d372725e-d915-496e-9b63-a16c111a76f3" name="Default Changelist" comment="Add Connect 4">
+    <list default="true" id="d372725e-d915-496e-9b63-a16c111a76f3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/smart/hhsbot/games/connectFour/ConnectFour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smart/hhsbot/games/connectFour/ConnectFour.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/smart/hhsbot/games/connectFour/ConnectFourBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smart/hhsbot/games/connectFour/ConnectFourBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/smart/hhsbot/BetaTesting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smart/hhsbot/BetaTesting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/smart/hhsbot/Bot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smart/hhsbot/Bot.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,12 +52,12 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../JDA" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Java" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -110,7 +111,19 @@
       <workItem from="1626528857986" duration="490000" />
       <workItem from="1626891946727" duration="15000" />
       <workItem from="1628107620523" duration="1212000" />
-      <workItem from="1628706979547" duration="33820000" />
+      <workItem from="1628706979547" duration="34152000" />
+      <workItem from="1628868520729" duration="9000" />
+      <workItem from="1629572261662" duration="779000" />
+      <workItem from="1630092703602" duration="7527000" />
+      <workItem from="1630283322441" duration="1722000" />
+      <workItem from="1630977813808" duration="1337000" />
+      <workItem from="1631219010939" duration="77000" />
+      <workItem from="1631221771138" duration="43000" />
+      <workItem from="1631228209831" duration="64000" />
+      <workItem from="1631647955936" duration="1157000" />
+      <workItem from="1632256603066" duration="74000" />
+      <workItem from="1633210047005" duration="12000" />
+      <workItem from="1642285183365" duration="502000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1624137695013</created>
@@ -133,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628860543284</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Fix some connect 4 issues">
+      <created>1628864093133</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1628864093133</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -143,6 +163,11 @@
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="Introduce an event for when a member leaves the server" />
     <MESSAGE value="Add Connect 4" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Connect 4" />
+    <MESSAGE value="Fix some connect 4 issues" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix some connect 4 issues" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
